@@ -35,5 +35,5 @@ modules:
     sources:
       - type: git
         url: https://github.com/sonnyp/Commit.git
-        tag: v2.1.0
-        commit: bdbf30802440555e05ee7cd68831994b3cc47d4b
+        tag: v2.2.0
+        commit: 9aa928e3326485df7d5b890a13894264f169e73f
