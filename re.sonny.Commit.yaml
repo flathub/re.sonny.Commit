@@ -39,8 +39,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/sonnyp/Commit.git
-        tag: v2.2.0
-        commit: 9aa928e3326485df7d5b890a13894264f169e73f
+        tag: v3.0.0
+        commit: e4670f798cb89e22aa97c0709d9f7b997b17095d
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
