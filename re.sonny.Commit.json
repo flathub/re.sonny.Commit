@@ -1,7 +1,7 @@
 {
   "id": "re.sonny.Commit",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "45",
+  "runtime-version": "47",
   "sdk": "org.gnome.Sdk",
   "command": "re.sonny.Commit",
   "finish-args": [
@@ -9,7 +9,7 @@
     "--socket=fallback-x11",
     "--socket=wayland",
     "--device=dri",
-    "--filesystem=home"
+    "--filesystem=host"
   ],
   "cleanup": [
     "/include",
@@ -30,9 +30,10 @@
       "cleanup": ["*"],
       "sources": [
         {
-          "type": "archive",
-          "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler/-/archive/v0.10.0/blueprint-compiler-v0.10.0.tar.gz",
-          "sha512": "1f2a9097e3d6a030385c371a01e32caefab6f7ede1979b43492255b504250ac7f44ae22a97656a7c33c0e518236b95d6074baf8f87c53df1fbb1e42eceb39a87"
+          "type": "git",
+          "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler",
+          "tag": "v0.14.0",
+          "commit": "8e10fcf8692108b9d4ab78f41086c5d7773ef864"
         }
       ]
     },
@@ -43,8 +44,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://download.gnome.org/sources/libspelling/0.2/libspelling-0.2.0.tar.xz",
-          "sha256": "fdc5609e02818eca6fc172ff164caa8e52dba638d7590130af3dfb1f28b53421"
+          "url": "https://download.gnome.org/sources/libspelling/0.4/libspelling-0.4.2.tar.xz",
+          "sha256": "b3e609b1a247e71bc097e262564f33f51fd7db566eeb0cd74ae5021536b878b5"
         }
       ]
     },
@@ -55,8 +56,8 @@
         {
           "type": "git",
           "url": "https://github.com/sonnyp/Commit.git",
-          "tag": "v4.1",
-          "commit": "c7db2f4140053755689c35862964f9568c5e284b"
+          "tag": "v4.2",
+          "commit": "6fdf327aeb6fd57bb9336147f761d7214493bbf7"
         }
       ]
     }
