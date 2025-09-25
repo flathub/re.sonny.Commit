@@ -1,60 +1,63 @@
 {
-  "id": "re.sonny.Commit",
-  "runtime": "org.gnome.Platform",
-  "runtime-version": "49",
-  "sdk": "org.gnome.Sdk",
-  "command": "re.sonny.Commit",
-  "finish-args": [
-    "--share=ipc",
-    "--socket=fallback-x11",
-    "--socket=wayland",
-    "--device=dri",
-    "--filesystem=host"
-  ],
-  "cleanup": [
-    "/include",
-    "/lib/pkgconfig",
-    "/man",
-    "/share/doc",
-    "/share/gtk-doc",
-    "/share/man",
-    "/share/pkgconfig",
-    "/share/installed-tests",
-    "*.la",
-    "*.a"
-  ],
-  "modules": [
-    {
-      "name": "libspelling",
-      "buildsystem": "meson",
-      "config-opts": ["-Ddocs=false", "-Dvapi=false"],
-      "sources": [
+    "id": "re.sonny.Commit",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "49",
+    "sdk": "org.gnome.Sdk",
+    "command": "re.sonny.Commit",
+    "finish-args": [
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--device=dri",
+        "--filesystem=host"
+    ],
+    "cleanup": [
+        "/include",
+        "/lib/pkgconfig",
+        "/man",
+        "/share/doc",
+        "/share/gtk-doc",
+        "/share/man",
+        "/share/pkgconfig",
+        "/share/installed-tests",
+        "*.la",
+        "*.a"
+    ],
+    "modules": [
         {
-          "type": "archive",
-          "url": "https://download.gnome.org/sources/libspelling/0.4/libspelling-0.4.9.tar.xz",
-          "sha256": "d093fd35ae0f1c98fb58876505287fc0a885e47da9d2411d6d7cd595f34d4ebf",
-          "x-checker-data": {
-            "type": "gnome",
-            "name": "libspelling"
-          }
-        }
-      ]
-    },
-    {
-      "name": "Commit",
-      "buildsystem": "meson",
-      "sources": [
+            "name": "libspelling",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Ddocs=false",
+                "-Dvapi=false"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/libspelling/0.4/libspelling-0.4.9.tar.xz",
+                    "sha256": "d093fd35ae0f1c98fb58876505287fc0a885e47da9d2411d6d7cd595f34d4ebf",
+                    "x-checker-data": {
+                        "type": "gnome",
+                        "name": "libspelling"
+                    }
+                }
+            ]
+        },
         {
-          "type": "git",
-          "url": "https://github.com/sonnyp/Commit.git",
-          "tag": "v4.3",
-          "commit": "8997ced4a83d4461971bfee6f6536f10b6f993fa",
-          "x-checker-data": {
-            "type": "git",
-            "tag-pattern": "^v([\\d.]+)$"
-          }
+            "name": "Commit",
+            "buildsystem": "meson",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/sonnyp/Commit.git",
+                    "tag": "v4.3",
+                    "commit": "8997ced4a83d4461971bfee6f6536f10b6f993fa",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^v([\\d.]+)$"
+                    }
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
