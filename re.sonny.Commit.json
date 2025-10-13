@@ -1,7 +1,7 @@
 {
   "id": "re.sonny.Commit",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "48",
+  "runtime-version": "49",
   "sdk": "org.gnome.Sdk",
   "command": "re.sonny.Commit",
   "finish-args": [
@@ -25,15 +25,22 @@
   ],
   "modules": [
     {
-      "name": "blueprint-compiler",
+      "name": "libportal",
       "buildsystem": "meson",
-      "cleanup": ["*"],
+      "config-opts": [
+        "-Dbackend-gtk3=disabled",
+        "-Dbackend-gtk4=enabled",
+        "-Dbackend-qt5=disabled",
+        "-Dbackend-qt6=disabled",
+        "-Dvapi=false",
+        "-Ddocs=false",
+        "-Dtests=false"
+      ],
       "sources": [
         {
-          "type": "git",
-          "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler.git",
-          "commit": "04ef0944db56ab01307a29aaa7303df6067cb3c0",
-          "tag": "v0.16.0"
+          "type": "archive",
+          "url": "https://github.com/flatpak/libportal/releases/download/0.9.1/libportal-0.9.1.tar.xz",
+          "sha256": "de801ee349ed3c255a9af3c01b1a401fab5b3fc1c35eb2fd7dfb35d4b8194d7f"
         }
       ]
     },
@@ -44,8 +51,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://download.gnome.org/sources/libspelling/0.4/libspelling-0.4.6.tar.xz",
-          "sha256": "3248a9b5336ea2f727d2db912d2f0083accc0505ce707679b3d9b8266c0101f5"
+          "url": "https://download.gnome.org/sources/libspelling/0.4/libspelling-0.4.9.tar.xz",
+          "sha256": "d093fd35ae0f1c98fb58876505287fc0a885e47da9d2411d6d7cd595f34d4ebf"
         }
       ]
     },
@@ -56,8 +63,8 @@
         {
           "type": "git",
           "url": "https://github.com/sonnyp/Commit.git",
-          "tag": "v4.3",
-          "commit": "8997ced4a83d4461971bfee6f6536f10b6f993fa"
+          "tag": "v4.4",
+          "commit": "3e91b258c28382111753872fe140c23f9e09d243"
         }
       ]
     }
